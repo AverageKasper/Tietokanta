@@ -1,0 +1,2 @@
+# Tietokanta
+suc nut
