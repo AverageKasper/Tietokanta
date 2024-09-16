@@ -6,6 +6,7 @@ suc nut
 <details>
 <summary> Tentti 1</summary>
 select * from goal;<br>
+  
 ![Screenshot 2024-09-16 130633](https://github.com/user-attachments/assets/b419320c-bfad-41d6-af84-42ee717390b8)
 
 
