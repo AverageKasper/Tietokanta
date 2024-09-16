@@ -5,17 +5,19 @@ suc nut
 
 <details>
 <summary> Tentti 1</summary>
+### 1
 select * from goal;<br>
   
 ![Screenshot 2024-09-16 130633](https://github.com/user-attachments/assets/b419320c-bfad-41d6-af84-42ee717390b8)
 
-
+### 2
 select name, type<br>
 from airport<br>
 where iso_country = "FI";<br>
 
 ![Screenshot 2024-09-16 115340](https://github.com/user-attachments/assets/9175f0be-4fc4-4d2a-904e-28e4c46ab607)
 
+### 3
 select name <br>
 from airport <br>
 where iso_country <br>
