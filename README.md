@@ -6,11 +6,11 @@ suc nut
 <details>
 <summary> Tentti 1</summary>
 <br>
-<p>select * from goal;</p>
+select * from goal;
 ![Picture2](https://github.com/user-attachments/assets/79c42c6a-1c0e-43f4-8ce1-645d0ff57838)
-<p>select name, type<br>
+select name, type<br>
 from airport<br>
-where iso_country = "FI";</p>
+where iso_country = "FI";
 ![image](https://github.com/user-attachments/assets/13a46bc4-5670-4556-9383-5b084335a7a6)
 
 ![Screenshot 2024-09-16 115340](https://github.com/user-attachments/assets/9175f0be-4fc4-4d2a-904e-28e4c46ab607)
