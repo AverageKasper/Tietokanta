@@ -6,7 +6,8 @@ suc nut
 <details>
 <summary> Tentti 1</summary>
 select * from goal;<br>
-![image](https://github.com/user-attachments/assets/dd3bd1ab-0af3-48d7-8165-438f9950d33a)
+![Screenshot 2024-09-16 130633](https://github.com/user-attachments/assets/b419320c-bfad-41d6-af84-42ee717390b8)
+
 
 select name, type<br>
 from airport<br>
