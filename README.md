@@ -210,17 +210,16 @@ left join game on game.id = goal_reached.game_id;
 </details>
 
 <details>
-<summary>Tentti 4, </summary>
+<summary>Tentti 4, Sisäkysely harjoitukset</summary>
 
 ### 1
-<p>select name 
+select name 
 from country <br>
 where iso_country in( <br>
 	select iso_country <br>
 	from airport <br>
 	where name like "Satsuma%" <br>
 	);
-</p>
 
 ![image](https://github.com/user-attachments/assets/3dd2e7a6-7b36-4f77-8660-20432c1a5897)
 
@@ -275,5 +274,54 @@ where id not in( <br>
 	);
 
 ![image](https://github.com/user-attachments/assets/1474fba2-0ddc-4406-a189-ed1f748ce040)
+
+</details>
+
+<details>
+<summary>Tentti 5, Koostetieto kyselyt harjoitukset</summary>
+
+### 1
+select max(elevation_ft)
+from airport;
+
+![image](https://github.com/user-attachments/assets/3aa705bc-e1ba-46a4-9f0e-7aebbce9def6)
+
+### 2
+select distinct continent, count(*)
+from country
+group by continent;
+
+![image](https://github.com/user-attachments/assets/a1aab61b-38c2-4a6e-a187-e1c52fa9c98f)
+
+### 3
+select screen_name, count(*)
+from game
+inner join goal_reached on game_id = game.id
+inner join goal on goal.id = goal_reached.goal_id
+group by screen_name;
+
+![image](https://github.com/user-attachments/assets/813bacc3-97bf-45d7-a969-dc40527e2c40)
+
+### 4
+select screen_name
+from game
+where co2_consumed in (
+	select min(co2_consumed)
+	from game
+	);
+
+![image](https://github.com/user-attachments/assets/1a1d29ac-601f-4f02-829d-ef1245257ca5)
+
+
+
+
+
+
+
+
+
+
+
+
 
 </details>
