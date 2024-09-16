@@ -8,8 +8,8 @@ suc nut
 <br>
 <p>select * from goal;</p>
 <p>![Picture2](https://github.com/user-attachments/assets/79c42c6a-1c0e-43f4-8ce1-645d0ff57838)</p>
-<p>select name, type
-from airport</n> 
+<p>select name, type<br>
+from airport<br>
 where iso_country = "FI";</p>
 <p>![image](https://github.com/user-attachments/assets/13a46bc4-5670-4556-9383-5b084335a7a6)
 </p>
