@@ -5,13 +5,13 @@ suc nut
 
 <details>
 <summary> Tentti 1</summary>
-<br>
-select * from goal;
-![Picture2](https://github.com/user-attachments/assets/79c42c6a-1c0e-43f4-8ce1-645d0ff57838)
+select * from goal;<br>
+![image](https://github.com/user-attachments/assets/dd3bd1ab-0af3-48d7-8165-438f9950d33a)
+
 select name, type<br>
 from airport<br>
-where iso_country = "FI";
-![image](https://github.com/user-attachments/assets/13a46bc4-5670-4556-9383-5b084335a7a6)
+where iso_country = "FI";<br>
+
 
 ![Screenshot 2024-09-16 115340](https://github.com/user-attachments/assets/9175f0be-4fc4-4d2a-904e-28e4c46ab607)
 
