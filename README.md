@@ -7,7 +7,7 @@ suc nut
 <summary> Tentti 1</summary>
 <br>
 <p>select * from goal;</p>
-<p>![image](https://github.com/user-attachments/assets/79c42c6a-1c0e-43f4-8ce1-645d0ff57838)</p>
+<p>![Picture1](https://github.com/user-attachments/assets/79c42c6a-1c0e-43f4-8ce1-645d0ff57838)</p>
 <p>select name, type
 from airport 
 where iso_country = "FI";</p>
