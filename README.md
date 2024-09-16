@@ -216,10 +216,10 @@ left join game on game.id = goal_reached.game_id;
 select name 
 from country <br>
 where iso_country in( <br>
-* select iso_country <br>
-	from airport <br>
-	where name like "Satsuma%" <br>
-	);
+ select iso_country <br>
+ from airport <br>
+ where name like "Satsuma%" <br>
+ );
 
 ![image](https://github.com/user-attachments/assets/3dd2e7a6-7b36-4f77-8660-20432c1a5897)
 
