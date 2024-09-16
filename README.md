@@ -164,3 +164,67 @@ and goal.name = "CLOUDS";
 ![image](https://github.com/user-attachments/assets/6b8cb32f-d5f9-40fc-974b-a7292924095e)
 
 </details>
+<details>
+<summary>Tentti 3, Join harjoitukset</summary>
+
+### 1
+select country.name as "country name", airport.name as "airport name" <br>
+from airport <br>
+inner join country on country.iso_country = airport.iso_country <br>
+where airport.scheduled_service = "yes" <br>
+and country.name = "Finland";
+
+![image](https://github.com/user-attachments/assets/e9505386-f7dd-4584-8c41-beed02909e82)
+
+### 2
+select game.screen_name, airport.name <br>
+from airport <br>
+inner join game on game.location = airport.ident; 
+
+![image](https://github.com/user-attachments/assets/fa56350b-6b1d-4924-a85c-4f00b282a11f)
+
+### 3
+select game.screen_name, country.name <br>
+from country <br>
+inner join airport on airport.iso_country = country.iso_country <br>
+inner join game on game.location = airport.ident;
+
+![image](https://github.com/user-attachments/assets/5e2bc227-9479-487b-86b9-9df7ceccd685)
+
+### 4
+select airport.name, game.screen_name <br>
+from airport <br>
+left join game on game.location = airport.ident <br>
+where airport.name like "%Hels%"; 
+
+![image](https://github.com/user-attachments/assets/8891665f-9eed-4813-bd75-7e5d98dc9874)
+
+### 5
+select goal.name, game.screen_name <br>
+from goal <br>
+left join goal_reached on goal_reached.goal_id = goal.id <br>
+left join game on game.id = goal_reached.game_id;
+
+![image](https://github.com/user-attachments/assets/b663a785-5945-4de5-bedb-b958096de7dd)
+
+</details>
+
+<details>
+<summary>Tentti 4, </summary>
+
+### 1
+select name 
+from country <br>
+where iso_country in( <br>
+	select iso_country <br>
+	from airport <br>
+	where name like "Satsuma%" <br>
+	)
+
+![image](https://github.com/user-attachments/assets/3dd2e7a6-7b36-4f77-8660-20432c1a5897)
+
+
+
+
+  
+</details>
