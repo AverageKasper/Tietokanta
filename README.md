@@ -219,12 +219,60 @@ where iso_country in( <br>
 	select iso_country <br>
 	from airport <br>
 	where name like "Satsuma%" <br>
-	)
+	);
 
 ![image](https://github.com/user-attachments/assets/3dd2e7a6-7b36-4f77-8660-20432c1a5897)
 
+### 2
+select name <br>
+from airport <br>
+where iso_country in( <br>
+	select iso_country <br>
+	from country <br>
+	where name = "Monaco" <br>
+	);
 
+![image](https://github.com/user-attachments/assets/d4bf2b84-6bda-4a83-9e32-37d51de39dc1)
 
+### 3
+select screen_name <br>
+from game <br>
+where id in( <br>
+	select game_id <br>
+	from goal_reached <br>
+	where goal_id in( <br>
+		select id <br>
+		from goal <br>
+		where name = "CLOUDS" <br>
+		) <br>
+	);
 
-  
+![image](https://github.com/user-attachments/assets/caee9529-c0e2-437a-a863-3faa9cf63908)
+
+### 4
+select name <br>
+from country <br>
+where iso_country not in( <br>
+	select iso_country <br>
+	from airport <br>
+	where name like "%" <br>
+	);
+
+![image](https://github.com/user-attachments/assets/784fc59f-d267-4b7c-8ad4-0032c0eed8b3)
+
+### 5
+select name <br>
+from goal <br>
+where id not in( <br>
+	select goal_id <br>
+	from goal_reached <br>
+	where game_id in ( <br>
+		select id <br>
+		from game <br>
+		where screen_name = "Heini" <br>
+		) <br>
+	);
+
+![image](https://github.com/user-attachments/assets/1474fba2-0ddc-4406-a189-ed1f748ce040)
+
 </details>
