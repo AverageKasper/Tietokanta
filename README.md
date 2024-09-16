@@ -74,91 +74,91 @@ from game;
 <summary> Tentti 2, Where-osan liitosehto harjoitukset</summary>
 
 ### 1
-select country.name as "country name", airport.name as "airport name" 
-from country, airport 
-where country.name = "Iceland"
+select country.name as "country name", airport.name as "airport name" <br>
+from country, airport <br>
+where country.name = "Iceland" <br>
 and airport.iso_country = country.iso_country;
 
 ![image](https://github.com/user-attachments/assets/92664947-9985-4e55-82d5-cc461b0a9e6e)
 
 ### 2
-select airport.name as "airport name" 
-from airport, country
-where country.name = "France"
-and airport.iso_country = country.iso_country
+select airport.name as "airport name" <br>
+from airport, country <br>
+where country.name = "France" <br>
+and airport.iso_country = country.iso_country <br>
 and airport.type = "large_airport";
 
 ![image](https://github.com/user-attachments/assets/68f856de-2bd6-49b9-a3aa-18a2089ea303)
 
 ### 3
-select country.name as country_name, airport.name as airport_name
-from country, airport
-where country.continent = "AN"
+select country.name as country_name, airport.name as airport_name <br>
+from country, airport <br>
+where country.continent = "AN" <br>
 and airport.iso_country = country.iso_country;
 
 ![image](https://github.com/user-attachments/assets/c62ac0cb-1e96-4695-a6c6-dd5f46146c87)
 
 ### 4
-select airport.elevation_ft 
-from airport, game
-where game.screen_name = "Heini"
+select airport.elevation_ft <br>
+from airport, game <br>
+where game.screen_name = "Heini" <br>
 and airport.ident = game.location;
 
 ![image](https://github.com/user-attachments/assets/5f9f1696-0d8a-4555-b743-176ded6d0660)
 
 ### 5
-select airport.elevation_ft * 0.3048 as elevation_m 
-from airport, game
-where game.screen_name = "Heini"
+select airport.elevation_ft * 0.3048 as elevation_m <br>
+from airport, game <br>
+where game.screen_name = "Heini" <br>
 and airport.ident = game.location;
 
 ![image](https://github.com/user-attachments/assets/7b19a3e0-1203-4522-a8f5-45db43095041)
 
 ### 6
-select airport.name 
-from airport, game
-where game.screen_name = "Ilkka"
+select airport.name <br>
+from airport, game <br>
+where game.screen_name = "Ilkka" <br>
 and game.location = airport.ident;
 
 ![image](https://github.com/user-attachments/assets/9c0e73d8-a532-4122-86ae-772cf8cdd48d)
 
 ### 7
-select country.name
-from airport, game, country
-where game.screen_name = "Ilkka"
-and game.location = airport.ident
+select country.name <br>
+from airport, game, country <br>
+where game.screen_name = "Ilkka" <br>
+and game.location = airport.ident <br>
 and airport.iso_country = country.iso_country;
 
 ![image](https://github.com/user-attachments/assets/bf7595f8-8df5-4484-88ed-fdcbfde2431b)
 
 ### 8
-select goal.name 
-from goal, goal_reached, game
-where game.screen_name = "Heini"
-and game.id = goal_reached.game_id
+select goal.name <br>
+from goal, goal_reached, game <br>
+where game.screen_name = "Heini" <br>
+and game.id = goal_reached.game_id <br>
 and goal_reached.goal_id = goal.id;
 
 ![image](https://github.com/user-attachments/assets/7662f587-0bf2-45f3-88be-ad195391b958)
 
 ### 9
-select airport.name 
-from airport, game, goal_reached, goal
-where game.location = airport.ident
-and goal_reached.game_id = game.id
-and goal_reached.goal_id = goal.id
-and game.screen_name = "Ilkka"
+select airport.name <br>
+from airport, game, goal_reached, goal <br>
+where game.location = airport.ident <br>
+and goal_reached.game_id = game.id <br>
+and goal_reached.goal_id = goal.id <br>
+and game.screen_name = "Ilkka" <br>
 and goal.name = "CLOUDS";
 
 ![image](https://github.com/user-attachments/assets/c675aed9-a8c7-4279-ac2b-9c6753403c16)
 
 ### 10
-select country.name 
-from airport, game, goal_reached, goal, country
-where game.location = airport.ident
-and goal_reached.game_id = game.id
-and goal_reached.goal_id = goal.id
-and airport.iso_country = country.iso_country
-and game.screen_name = "Ilkka"
+select country.name <br>
+from airport, game, goal_reached, goal, country <br>
+where game.location = airport.ident <br>
+and goal_reached.game_id = game.id <br>
+and goal_reached.goal_id = goal.id <br>
+and airport.iso_country = country.iso_country <br>
+and game.screen_name = "Ilkka" <br>
 and goal.name = "CLOUDS";
 
 ![image](https://github.com/user-attachments/assets/6b8cb32f-d5f9-40fc-974b-a7292924095e)
