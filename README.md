@@ -324,4 +324,23 @@ where co2_consumed in (
 
 
 
+
+
+
+
+
+
+
+
+
+
+### 10
+select name 
+from airport 
+where latitude_deg = (
+	select min(latitude_deg) 
+	from airport);
+
+![image](https://github.com/user-attachments/assets/b714b1d8-d2a7-410a-86b3-8a256565643a)
+
 </details>
