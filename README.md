@@ -1,7 +1,4 @@
 # Tietokanta
-suc nut
-![alt](https://github.com/AverageKasper/Tietokanta/blob/main/Pirat_Nation-1831723969499787363-01.jpg)
-![Picture1](https://github.com/user-attachments/assets/6b3345d9-53be-43c1-b0b0-a4c30bebb0c6)
 
 <details>
 <summary> Tentti 1, Yhteen tauluun kohdistuvien kyselyiden harjoitukset</summary>
@@ -312,27 +309,56 @@ where co2_consumed in (
 
 ![image](https://github.com/user-attachments/assets/1a1d29ac-601f-4f02-829d-ef1245257ca5)
 
+### 5
+select country.name, count(*)
+from country
+inner join airport on airport.iso_country = country.iso_country
+group by country.name
+order by count(airport.ident) desc, country.name asc
+limit 50;
 
+![image](https://github.com/user-attachments/assets/15d306bc-7218-4929-92cd-cf74d689d0a1)
 
+### 6
+select country.name
+from country
+inner join airport on airport.iso_country = country.iso_country
+group by airport.iso_country
+having count(*) > 1000;
 
+![image](https://github.com/user-attachments/assets/08510bf6-3257-45af-8ba3-44c44946cf6e)
 
+### 7 
+select name 
+from airport 
+where elevation_ft = (
+	select max(elevation_ft) 
+	from airport);
 
+![image](https://github.com/user-attachments/assets/5e9d804b-d657-4250-b90c-3d208bcedbb5)
 
+### 8
+select country.name 
+from country
+join airport on airport.iso_country = country.iso_country 
+where elevation_ft = (
+	select max(elevation_ft) 
+	from airport);
 
+![image](https://github.com/user-attachments/assets/3eb1976d-51ac-4661-a3eb-6955854ba61f)
 
+### 9 
+select count(*)
+from goal
+join goal_reached on goal_reached.goal_id = goal.id
+join game on game.id = goal_reached.game_id
+where goal.target = "TEMP" 
+and game.screen_name = (
+	select screen_name
+	from game
+	where screen_name like "Vesa");
 
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/6f42106c-56df-46c2-94ca-cbf38533144a)
 
 ### 10
 select name 
@@ -344,3 +370,45 @@ where latitude_deg = (
 ![image](https://github.com/user-attachments/assets/b714b1d8-d2a7-410a-86b3-8a256565643a)
 
 </details>
+
+<details>
+<summary>Tentti 6, Päivityskyselyt harjoitukset</summary>
+
+### 1 
+update game
+set location =(
+	select ident
+	from airport 
+	where name like "Nottingham airport")
+where screen_name = "Vesa";
+
+update game
+set co2_consumed = co2_consumed + 500
+where screen_name = "Vesa";
+
+![image](https://github.com/user-attachments/assets/d0f63d1c-ed11-46ca-aff0-3d70074d55e1)
+
+### 2
+
+![image](https://github.com/user-attachments/assets/dcce7f32-b7d0-4415-bc62-84dbeaeb7eaa)
+
+### 3 
+delete from goal_reached
+
+![image](https://github.com/user-attachments/assets/0704c01a-c266-4030-ab16-312cb702b8ed)
+
+### 4
+delete from game
+
+![image](https://github.com/user-attachments/assets/968c2942-ec50-4165-9932-21593c54b9ab)
+
+</details>
+
+# Lopputulos 
+
+![image](https://github.com/user-attachments/assets/ec0a6789-e768-49ff-ae51-e094b0eb8e25)
+
+![image](https://github.com/user-attachments/assets/7eb99ee4-2e69-45a7-8ae4-1fa6e2355c22)
+
+![image](https://github.com/user-attachments/assets/26e0c5af-2792-4ffa-adb0-b8b6cab253ad)
+
